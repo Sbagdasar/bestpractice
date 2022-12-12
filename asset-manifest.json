@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/Sbagdasar/bestpractice/static/css/main.63133d3c.css",
-    "main.js": "/Sbagdasar/bestpractice/static/js/main.54dc96f8.js",
-    "static/js/787.66cb4309.chunk.js": "/Sbagdasar/bestpractice/static/js/787.66cb4309.chunk.js",
-    "static/media/avatar.png": "/Sbagdasar/bestpractice/static/media/avatar.d947cb9d0d13765666b6.png",
-    "index.html": "/Sbagdasar/bestpractice/index.html",
-    "main.63133d3c.css.map": "/Sbagdasar/bestpractice/static/css/main.63133d3c.css.map",
-    "main.54dc96f8.js.map": "/Sbagdasar/bestpractice/static/js/main.54dc96f8.js.map",
-    "787.66cb4309.chunk.js.map": "/Sbagdasar/bestpractice/static/js/787.66cb4309.chunk.js.map"
+    "main.css": "/bestpractice/static/css/main.63133d3c.css",
+    "main.js": "/bestpractice/static/js/main.e7815c60.js",
+    "static/js/787.66cb4309.chunk.js": "/bestpractice/static/js/787.66cb4309.chunk.js",
+    "static/media/avatar.png": "/bestpractice/static/media/avatar.d947cb9d0d13765666b6.png",
+    "index.html": "/bestpractice/index.html",
+    "main.63133d3c.css.map": "/bestpractice/static/css/main.63133d3c.css.map",
+    "main.e7815c60.js.map": "/bestpractice/static/js/main.e7815c60.js.map",
+    "787.66cb4309.chunk.js.map": "/bestpractice/static/js/787.66cb4309.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.63133d3c.css",
-    "static/js/main.54dc96f8.js"
+    "static/js/main.e7815c60.js"
   ]
 }
