@@ -3,9 +3,14 @@
 }
 
 .hw {
-
+    border-top: 2px solid #ccc;
+    border-bottom: 2px solid #ccc;
+    padding: 32px 70px;
+    margin-top: 10px;
 }
 
 .hwTitle {
-
+    font-size: 22px;
+    color: #000;
+    margin-left: 70px;
 }
