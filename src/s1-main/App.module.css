@@ -10,7 +10,9 @@
 }
 
 .hwTitle {
+    margin-top: 40px;
     font-size: 22px;
+    font-weight: 600;
     color: #000;
     margin-left: 70px;
 }
