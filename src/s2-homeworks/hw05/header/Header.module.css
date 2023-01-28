@@ -2,7 +2,12 @@
 }
 
 .header {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 70px 0 ;
 }
 
 .header h1 {
+    font-size: 24px;
+    font-weight: 600;
 }
