@@ -1,7 +1,13 @@
 .select {
+    width: 165px;
+    height: 24px;
+    border: 1px solid #C2C2C2;
+    border-radius: 2px;
+    font-size: 14px;
 }
 
 .select:focus {
+    background-color: #fff;
 }
 
 
