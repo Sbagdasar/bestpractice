@@ -21,3 +21,7 @@
     flex-direction: column;
     gap: 36px;
 }
+
+.inputError{
+    border-color: #f00;
+}
