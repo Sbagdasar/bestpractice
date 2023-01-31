@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react'
+import React, {ChangeEvent, ChangeEventHandler, useEffect} from 'react'
 import s from './HW12.module.css'
 import s2 from '../../s1-main/App.module.css'
 import SuperSelect from '../hw07/common/c5-SuperSelect/SuperSelect'
@@ -22,9 +22,11 @@ const themes = [
 const HW12 = () => {
     // взять ид темы из редакса
     const themeId = useSelector<AppStoreType, number>(state => state.theme.themeId)
-    const dispath = useDispatch()
+
+    const dispatch = useDispatch()
     const change = (id: number) => { // дописать функцию
-        dispath(changeThemeId(id))
+
+        dispatch(changeThemeId(id))
     }
 
     useEffect(() => {
