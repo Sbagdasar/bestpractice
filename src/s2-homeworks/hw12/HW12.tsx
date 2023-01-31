@@ -1,4 +1,4 @@
-import React, {ChangeEvent, ChangeEventHandler, useEffect} from 'react'
+import React, {useEffect} from 'react'
 import s from './HW12.module.css'
 import s2 from '../../s1-main/App.module.css'
 import SuperSelect from '../hw07/common/c5-SuperSelect/SuperSelect'
@@ -13,12 +13,12 @@ import {changeThemeId} from "./bll/themeReducer";
 * 4 - передать пропсы в SuperSelect
 * */
 
-const themes = [
+const themes :themesType= [
     {id: 1, value: 'light'},
     {id: 2, value: 'blue'},
     {id: 3, value: 'dark'},
 ]
-
+export type themesType = Array<{ id: number, value: string }>
 const HW12 = () => {
     // взять ид темы из редакса
     const themeId = useSelector<AppStoreType, number>(state => state.theme.themeId)

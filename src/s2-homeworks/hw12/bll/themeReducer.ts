@@ -1,7 +1,9 @@
 const initState = {
     themeId: 1,
 }
-type InitStateType = typeof initState
+type InitStateType = {
+    themeId: number
+}
 export const themeReducer = (state:InitStateType = initState, action: ChangeThemeIdType): InitStateType => { // fix any
     switch (action.type) {
         // дописать
