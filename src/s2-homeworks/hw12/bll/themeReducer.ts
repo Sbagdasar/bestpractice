@@ -1,4 +1,4 @@
-const initState = {
+const initState:InitStateType = {
     themeId: 1,
 }
 type InitStateType = {
@@ -8,7 +8,7 @@ export const themeReducer = (state:InitStateType = initState, action: ChangeThem
     switch (action.type) {
         // дописать
         case "SET_THEME_ID":{
-
+debugger
            return  {...state, themeId: action.id}
         }
         default:
@@ -19,4 +19,4 @@ type ChangeThemeIdType = {
     type: 'SET_THEME_ID'
     id:number
 }
-export const changeThemeId = (id: number) => ({ type: 'SET_THEME_ID', id }) // fix any
+export const changeThemeId = (id: number):ChangeThemeIdType => ({ type: 'SET_THEME_ID', id } as const) // fix any
