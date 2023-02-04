@@ -2,7 +2,7 @@ import React, {useState} from 'react'
 import s2 from '../../s1-main/App.module.css'
 import s from './HW13.module.css'
 import SuperButton from '../hw04/common/c2-SuperButton/SuperButton'
-import axios from 'axios'
+import axios, {AxiosError} from 'axios'
 import success200 from './images/200.svg'
 import error400 from './images/400.svg'
 import error500 from './images/500.svg'
@@ -34,14 +34,41 @@ const HW13 = () => {
         axios
             .post(url, {success: x})
             .then((res) => {
+                console.log(res)
                 setCode('Код 200!')
                 setImage(success200)
+                setText('...всё ок)\n' +
+                    'код 200 - обычно означает что скорее всего всё ок)')
+                setInfo('')
                 // дописать
 
             })
-            .catch((e) => {
-                // дописать
-
+            .catch((e: AxiosError) => {
+                switch (e.response?.status) {
+                    case 500: {
+                        setCode('Ошибка 500!')
+                        setImage(error500)
+                        setText('эмитация ошибки на сервере ошибка 500 - обычно означает что что-то сломалось на сервере, например база данных')
+                        setInfo('')
+                        break
+                    }
+                    case 400: {
+                        setCode('Ошибка 400!')
+                        setImage(error400)
+                        setText('Ты не отправил success в body вообще!\n' +
+                            'ошибка 400 - обычно означает что скорее всего фронт отправил что-то не то на бэк!')
+                        setInfo('')
+                        break
+                    }
+                    default: {
+                        setCode('Error')
+                        setImage(errorUnknown)
+                        setText('Network Error\n' +
+                            'AxiosError')
+                        setInfo('')
+                        break
+                    }
+                }
             })
     }
 
@@ -56,7 +83,7 @@ const HW13 = () => {
                         onClick={send(true)}
                         xType={'secondary'}
                         // дописать
-
+                        disabled={!!info}
                     >
                         Send true
                     </SuperButton>
@@ -65,6 +92,7 @@ const HW13 = () => {
                         onClick={send(false)}
                         xType={'secondary'}
                         // дописать
+                        disabled={!!info}
 
                     >
                         Send false
@@ -74,6 +102,7 @@ const HW13 = () => {
                         onClick={send(undefined)}
                         xType={'secondary'}
                         // дописать
+                        disabled={!!info}
 
                     >
                         Send undefined
@@ -83,6 +112,7 @@ const HW13 = () => {
                         onClick={send(null)} // имитация запроса на не корректный адрес
                         xType={'secondary'}
                         // дописать
+                        disabled={!!info}
 
                     >
                         Send null
