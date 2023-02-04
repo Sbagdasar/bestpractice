@@ -2,7 +2,7 @@ import React, {useState} from 'react'
 import s2 from '../../s1-main/App.module.css'
 import s from './HW13.module.css'
 import SuperButton from '../hw04/common/c2-SuperButton/SuperButton'
-import axios, {AxiosError} from 'axios'
+import axios from 'axios'
 import success200 from './images/200.svg'
 import error400 from './images/400.svg'
 import error500 from './images/500.svg'
@@ -37,32 +37,33 @@ const HW13 = () => {
                 console.log(res)
                 setCode('Код 200!')
                 setImage(success200)
-                setText('...всё ок)')
-                setInfo('код 200 - обычно означает что скорее всего всё ок)')
+                setText(res.data.errorText)
+                setInfo(res.data.info)
                 // дописать
 
             })
-            .catch((e: AxiosError) => {
+            .catch((e) => {
                 switch (e.response?.status) {
                     case 500: {
+                        console.log(e)
                         setCode('Ошибка 500!')
                         setImage(error500)
-                        setText('эмитация ошибки на сервере')
-                        setInfo('ошибка 500 - обычно означает что что-то сломалось на сервере, например база данных)')
+                        setText(e.response?.data.errorText)
+                        setInfo(e.response?.data.info)
                         break
                     }
                     case 400: {
                         setCode('Ошибка 400!')
                         setImage(error400)
-                        setText('Ты не отправил success в body вообще!')
-                        setInfo('ошибка 400 - обычно означает что скорее всего фронт отправил что-то не то на бэк!')
+                        setText(e.response?.data.errorText)
+                        setInfo(e.response?.data.info)
                         break
                     }
                     default: {
                         setCode('Error')
                         setImage(errorUnknown)
-                        setText('Error')
-                        setInfo('Error')
+                        setText(e.response?.data.errorText)
+                        setInfo(e.response?.data.info)
                         break
                     }
                 }
