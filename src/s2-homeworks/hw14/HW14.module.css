@@ -1,7 +1,11 @@
 .tech {
-
+    margin-top: 10px;
+    font-size: 20px;
 }
 
 .loading {
-
+max-width: 372px;
+    text-align: right;
+    margin-top: 10px;
+    color: #9a9898
 }

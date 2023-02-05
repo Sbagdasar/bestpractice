@@ -48,22 +48,22 @@ const HW13 = () => {
                         console.log(e)
                         setCode('Ошибка 500!')
                         setImage(error500)
-                        setText(e.response?.data.errorText)
-                        setInfo(e.response?.data.info)
+                        setText(e.response?.data?.errorText)
+                        setInfo(e.response?.data?.info)
                         break
                     }
                     case 400: {
                         setCode('Ошибка 400!')
                         setImage(error400)
-                        setText(e.response?.data.errorText)
-                        setInfo(e.response?.data.info)
+                        setText(e.response?.data?.errorText)
+                        setInfo(e.response?.data?.info)
                         break
                     }
                     default: {
                         setCode('Error')
                         setImage(errorUnknown)
-                        setText(e.response?.data.errorText)
-                        setInfo(e.response?.data.info)
+                        setText('Error')
+                        setInfo('Error')
                         break
                     }
                 }

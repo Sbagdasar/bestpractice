@@ -8,7 +8,7 @@ import {useSearchParams} from 'react-router-dom'
 /*
 * 1 - дописать функцию onChangeTextCallback в SuperDebouncedInput
 * 2 - дописать функцию sendQuery в HW14
-* 3 - дописать функцию onChangeText в HW14
+* 3 - дописать функцию onChangeText в HW14 +
 * 4 - сделать стили в соответствии с дизайном
 * 5 - добавить HW14 в HW5/pages/JuniorPlus
 * */
@@ -26,7 +26,7 @@ const getTechs = (find: string) => {
 
 const HW14 = () => {
     const [find, setFind] = useState('')
-    const [isLoading, setLoading] = useState(false)
+    const [isLoading, setLoading] = useState(true)
     const [searchParams, setSearchParams] = useSearchParams()
     const [techs, setTechs] = useState<string[]>([])
 
@@ -35,7 +35,13 @@ const HW14 = () => {
         getTechs(value)
             .then((res) => {
                 // делает студент
-
+               if(res && res.data.techs.length > 0){
+                   setLoading(true)
+                   setTechs(res.data.techs)
+               }else {
+                   setLoading(true)
+                   setTechs(['NO MATCHES'])
+               }
                 // сохранить пришедшие данные
 
                 //
@@ -45,9 +51,9 @@ const HW14 = () => {
     const onChangeText = (value: string) => {
         setFind(value)
         // делает студент
-
         // добавить/заменить значение в квери урла
-        // setSearchParams(
+
+        setSearchParams({'find':value})
 
         //
     }
