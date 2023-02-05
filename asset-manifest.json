@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/bestpractice/static/css/main.3d18a763.css",
-    "main.js": "/bestpractice/static/js/main.6caa6dca.js",
+    "main.css": "/bestpractice/static/css/main.7846049e.css",
+    "main.js": "/bestpractice/static/js/main.7d6c5709.js",
     "static/js/787.66cb4309.chunk.js": "/bestpractice/static/js/787.66cb4309.chunk.js",
     "static/media/avatar.png": "/bestpractice/static/media/avatar.d947cb9d0d13765666b6.png",
     "static/media/200.svg": "/bestpractice/static/media/200.96248f7df0dde10e0a82ac30418f50bc.svg",
@@ -14,12 +14,12 @@
     "static/media/checked.svg": "/bestpractice/static/media/checked.b75ca55e8759862b4083.svg",
     "index.html": "/bestpractice/index.html",
     "static/media/burger.svg": "/bestpractice/static/media/burger.700e416f7bfe3697f96b36c778d25355.svg",
-    "main.3d18a763.css.map": "/bestpractice/static/css/main.3d18a763.css.map",
-    "main.6caa6dca.js.map": "/bestpractice/static/js/main.6caa6dca.js.map",
+    "main.7846049e.css.map": "/bestpractice/static/css/main.7846049e.css.map",
+    "main.7d6c5709.js.map": "/bestpractice/static/js/main.7d6c5709.js.map",
     "787.66cb4309.chunk.js.map": "/bestpractice/static/js/787.66cb4309.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.3d18a763.css",
-    "static/js/main.6caa6dca.js"
+    "static/css/main.7846049e.css",
+    "static/js/main.7d6c5709.js"
   ]
 }
